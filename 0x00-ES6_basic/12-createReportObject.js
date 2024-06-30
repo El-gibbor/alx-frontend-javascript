@@ -1,4 +1,3 @@
-import createEmployeesObject from './11-createEmployeesObject.js';
 export default function createReportObject(employeesList) {
   return {
     allEmployees: {
@@ -8,12 +7,3 @@ export default function createReportObject(employeesList) {
 
   };
 }
-
-const employees = {
-  ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-  ...createEmployeesObject('marketing', ['Sylvie'])
-};
-
-const report = createReportObject(employees);
-console.log(report.allEmployees);
-console.log(report.getNumberOfDepartments(report.allEmployees));
